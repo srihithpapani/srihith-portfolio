@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Srihith Papani - Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<style>
-  body { font-family: 'Roboto', sans-serif; margin:0; padding:0; background:#f5f7fa; color:#333; }
-  header { background: linear-gradient(135deg,#1e90ff,#00d4ff); color:white; padding:80px 20px; text-align:center; animation: fadeIn 2s;}
-  h1 { font-size:3em; margin:0; }
-  h2 { color:#1e90ff; margin-top:40px; }
-  p { line-height:1.6; }
-  section { padding:50px 20px; max-width:900px; margin:auto; }
-  .card { background:white; padding:20px; margin:20px 0; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;}
-  .card:hover { transform: translateY(-5px); }
-  .projects { display:flex; flex-wrap:wrap; gap:20px; }
-  .project-card { flex:1; min-width:250px; background:white; padding:20px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;}
-  .project-card:hover { transform: translateY(-10px); }
-  .download-btn { background:#1e90ff; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer; text-decoration:none; }
-  @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Srihith Papani - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Roboto', sans-serif; background:#f5f7fa; color:#333; line-height:1.6; }
+    
+    header {
+      background: linear-gradient(135deg,#1e90ff,#00d4ff);
+      color:white; 
+      text-align:center; 
+      padding:100px 20px;
+    }
+    header h1 { font-size:3em; margin-bottom:10px; animation: fadeIn 2s ease-in-out; }
+    header p { font-size:1.2em; margin-bottom:20px; }
+    .download-btn {
+      background:#fff; 
+      color:#1e90ff; 
+      padding:12px 25px; 
+      border:none; 
+      border-radius:5px; 
+      font-weight:bold; 
+      text-decoration:none;
+      transition: transform 0.3s;
+    }
+    .download-btn:hover { transform: scale(1.1); }
+
+    section { max-width:900px; margin:50px auto; padding:0 20px; }
+    h2 { color:#1e90ff; margin-bottom:20px; }
+
+    .card { background:white; padding:20px; margin:15px 0; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .card:hover { transform: translateY(-5px); }
+
+    .projects { display:flex; flex-wrap:wrap; gap:20px; }
+    .project-card { flex:1; min-width:250px; background:white; padding:20px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .project-card:hover { transform: translateY(-10px); }
+
+    ul { list-style-type: square; padding-left:20px; }
+
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+
+    footer { text-align:center; padding:20px; color:#555; background:#f0f0f0; }
+    a { color:#1e90ff; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+  </style>
 </head>
 <body>
 
@@ -31,37 +58,17 @@
 
 <section id="about">
   <h2>About Me</h2>
-  <p>I am passionate about building scalable and high-quality software systems. I enjoy backend, frontend, APIs, cloud technologies, and data-driven solutions.</p>
+  <p>I am passionate about building scalable and high-quality software systems. I enjoy backend, frontend, APIs, and cloud technologies. I love creating practical solutions and visually appealing user experiences.</p>
 </section>
 
-<section id="education">
-  <h2>Education</h2>
+<section id="skills">
+  <h2>Skills</h2>
   <div class="card">
-    <h3>University of Illinois Springfield</h3>
-    <p>Master’s in Computer Science, GPA: 4.00/4.00</p>
-  </div>
-  <div class="card">
-    <h3>Anurag University, Hyderabad, India</h3>
-    <p>B.Tech in Computer Science Engineering, CGPA: 7.28</p>
-  </div>
-</section>
-
-<section id="experience">
-  <h2>Experience</h2>
-  <div class="card">
-    <h3>Part-Time (Web Editing) – DART Staff, Springfield, IL</h3>
-    <p>Aug 2024–Present</p>
     <ul>
-      <li>Optimized 25+ PDFs weekly for clarity and accessibility</li>
-      <li>Improved workflows, increased productivity, and reduced errors</li>
-    </ul>
-  </div>
-  <div class="card">
-    <h3>Data Analyst Intern – Kejriwal Geotech Pvt Ltd, Surat, India</h3>
-    <p>Aug 2023–Jan 2024</p>
-    <ul>
-      <li>Collected and analyzed IoT sensor data from 50+ devices</li>
-      <li>Automated reporting using Python, built interactive dashboards</li>
+      <li>Programming: Java, Kotlin, JavaScript/TypeScript, Python</li>
+      <li>Web Development: NextJS, HTML, CSS, Bootstrap</li>
+      <li>Cloud & Tools: AWS, Terraform, Ansible, Git, Docker</li>
+      <li>Databases: MySQL, PostgreSQL, MongoDB</li>
     </ul>
   </div>
 </section>
@@ -70,25 +77,18 @@
   <h2>Projects</h2>
   <div class="projects">
     <div class="project-card">
-      <h3>Object Detection App</h3>
-      <p>Flutter, TensorFlow Lite, Firebase. Real-time app for visually impaired users with audio feedback.</p>
+      <h3>E-Commerce Web App</h3>
+      <p>Full-stack e-commerce platform using Java, NextJS, AWS. Features product listings, authentication, and payment integration.</p>
     </div>
     <div class="project-card">
-      <h3>Presentation Control System</h3>
-      <p>Python, OpenCV, MediaPipe. Gesture-based hands-free presentation system with 95% detection accuracy.</p>
+      <h3>Real-Time Chat App</h3>
+      <p>Kotlin, Firebase. A scalable chat application with live messaging and notifications.</p>
+    </div>
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>NextJS, HTML, CSS. Responsive portfolio showcasing projects, skills, and resume.</p>
     </div>
   </div>
-</section>
-
-<section id="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>Programming: Python, Java, SQL, JavaScript</li>
-    <li>Web: HTML/CSS, Bootstrap</li>
-    <li>Databases: MySQL, MongoDB, PostgreSQL</li>
-    <li>Data Science & ML: Pandas, NumPy, TensorFlow, Scikit-learn</li>
-    <li>Cloud & Tools: AWS, Docker, Git</li>
-  </ul>
 </section>
 
 <section id="contact">
@@ -97,6 +97,10 @@
   <p>LinkedIn: <a href="https://linkedin.com/in/srihith-papani">linkedin.com/in/srihith-papani</a></p>
   <p>GitHub: <a href="https://github.com/srihithpapani">github.com/srihithpapani</a></p>
 </section>
+
+<footer>
+  &copy; 2025 Srihith Papani | Designed for Recruiters
+</footer>
 
 </body>
 </html>
