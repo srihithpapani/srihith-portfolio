@@ -22,8 +22,8 @@
 
     section { max-width:950px; margin:70px auto; padding:0 20px; }
     h2 { color:#1e90ff; margin-bottom:25px; border-bottom:2px solid #1e90ff; display:inline-block; padding-bottom:5px; }
-    .card, .cert-card { background:white; padding:25px; margin:20px 0; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
-    .card:hover, .cert-card:hover { transform:translateY(-8px); box-shadow:0 12px 30px rgba(0,0,0,0.2); }
+    .card, .cert-card, .exp-card { background:white; padding:25px; margin:20px 0; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+    .card:hover, .cert-card:hover, .exp-card:hover { transform:translateY(-8px); box-shadow:0 12px 30px rgba(0,0,0,0.2); }
 
     .projects { display:flex; flex-wrap:wrap; gap:25px; }
     .project-card { flex:1; min-width:280px; background:white; padding:25px; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
@@ -44,7 +44,11 @@
     #backToTop { position: fixed; bottom: 30px; right:30px; background:#1e90ff; color:white; border:none; border-radius:50%; width:50px; height:50px; font-size:24px; cursor:pointer; display:none; transition: background 0.3s; }
     #backToTop:hover { background:#00d4ff; }
 
-    @media(max-width:768px){ .projects { flex-direction: column; } header h1{font-size:2.2em;} header p{font-size:1em;} }
+    @media(max-width:768px){ 
+      .projects { flex-direction: column; } 
+      header h1{font-size:2.2em;} 
+      header p{font-size:1em;} 
+    }
   </style>
 </head>
 <body>
@@ -65,10 +69,36 @@
   <h2>Skills</h2>
   <div class="card">
     <ul>
-      <li>Programming: Java, Kotlin, JavaScript/TypeScript, Python</li>
+      <li>Programming: Python, Java, SQL, JavaScript/TypeScript, Kotlin</li>
       <li>Web Development: NextJS, HTML, CSS, Bootstrap</li>
-      <li>Cloud & Tools: AWS, Terraform, Ansible, Git, Docker</li>
+      <li>Cloud & Tools: AWS, Terraform, Ansible, Git, Docker, Cloudflare Workers</li>
       <li>Databases: MySQL, PostgreSQL, MongoDB</li>
+      <li>Data Science & ML: Pandas, NumPy, Deep Learning, TensorFlow, Scikit-learn</li>
+      <li>Soft Skills: Teamwork, Problem-solving, Time Management, Clear Communication</li>
+    </ul>
+  </div>
+</section>
+
+<section id="experience" class="animate__animated animate__fadeInUp">
+  <h2>Experience</h2>
+  <div class="exp-card">
+    <h3>Part-Time (Web Editing) – DART Staff, Springfield, IL, USA</h3>
+    <p><strong>Aug 2024 – Present</strong></p>
+    <ul>
+      <li>Remediated and optimized 25+ PDFs weekly, improving clarity and accessibility.</li>
+      <li>Conducted comprehensive quality assurance on documents, reducing errors and improving stakeholder satisfaction.</li>
+      <li>Streamlined workflows, coordinated multiple project deadlines, improving overall productivity.</li>
+      <li>Provided troubleshooting for PDFs and documents ensuring seamless access and continuous operations.</li>
+    </ul>
+  </div>
+  <div class="exp-card">
+    <h3>Data Analyst Intern – Kejriwal Geotech Pvt Ltd, Surat, India</h3>
+    <p><strong>Aug 2023 – Jan 2024</strong></p>
+    <ul>
+      <li>Collected, cleaned, and analyzed IoT sensor data from 50+ devices, improving reporting accuracy.</li>
+      <li>Automated recurring reporting using Python pipelines, reducing manual effort and errors.</li>
+      <li>Developed interactive dashboards with real-time visualizations for project monitoring.</li>
+      <li>Collaborated with cross-functional teams to implement advanced analytics solutions.</li>
     </ul>
   </div>
 </section>
@@ -77,16 +107,16 @@
   <h2>Projects</h2>
   <div class="projects">
     <div class="project-card">
-      <h3>E-Commerce Web App</h3>
-      <p>Full-stack platform using Java, NextJS, AWS. Includes product listings, authentication, and payment integration.</p>
+      <h3>Object Detection App</h3>
+      <p>Developed a real-time object detection app for visually impaired users using Flutter, TensorFlow Lite, and Firebase. Achieved 90% accuracy with audio feedback and voice commands.</p>
     </div>
     <div class="project-card">
-      <h3>Real-Time Chat App</h3>
-      <p>Kotlin, Firebase. Scalable chat app with live messaging and notifications.</p>
+      <h3>Presentation Control System</h3>
+      <p>Hand gesture recognition system for hands-free presentation control using Python, OpenCV, MediaPipe, TensorFlow, and PyTorch. Achieved 95% detection accuracy for intuitive gestures.</p>
     </div>
     <div class="project-card">
       <h3>Portfolio Website</h3>
-      <p>NextJS, HTML, CSS. Responsive portfolio showcasing projects, skills, and resume.</p>
+      <p>Responsive portfolio using NextJS, HTML, CSS showcasing projects, skills, and resume.</p>
     </div>
   </div>
 </section>
@@ -97,9 +127,21 @@
   <div class="cert-card">Udemy: SQL for Developers, Data Analysts & BI – MySQL skills for practical projects</div>
 </section>
 
+<section id="volunteer" class="animate__animated animate__fadeInUp">
+  <h2>Volunteer Experience</h2>
+  <div class="exp-card">
+    <ul>
+      <li>Cloud Club: Vice President – Led cloud workshops mentoring students on AWS deployment.</li>
+      <li>Blockchain Club: Session Leader – Conducted sessions supporting blockchain projects.</li>
+      <li>Hickories: Group Member – Collaborated on innovation-focused technical projects and hackathons.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="contact" class="animate__animated animate__fadeInUp">
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:papanisrihith@gmail.com">papanisrihith@gmail.com</a></p>
+  <p>Email: <a href="mailto:Papanisrihith@gmail.com">Papanisrihith@gmail.com</a></p>
+  <p>Phone: (217) 761-7246</p>
   <p>LinkedIn: <a href="https://linkedin.com/in/srihith-papani">linkedin.com/in/srihith-papani</a></p>
   <p>GitHub: <a href="https://github.com/srihithpapani">github.com/srihithpapani</a></p>
 </section>
@@ -139,5 +181,4 @@
 
 </body>
 </html>
-
 
