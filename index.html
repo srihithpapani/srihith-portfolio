@@ -5,63 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Srihith Papani - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
     * { box-sizing: border-box; margin:0; padding:0; }
-    body { font-family: 'Roboto', sans-serif; background:#f5f7fa; color:#333; line-height:1.6; }
-    
+    body { font-family:'Roboto',sans-serif; background:#f5f7fa; color:#333; line-height:1.6; scroll-behavior: smooth; }
+
     header {
+      position: relative;
       background: linear-gradient(135deg,#1e90ff,#00d4ff);
-      color:white; 
-      text-align:center; 
-      padding:100px 20px;
+      color:white; text-align:center; padding:120px 20px 150px 20px; overflow:hidden;
     }
     header h1 { font-size:3em; margin-bottom:10px; animation: fadeIn 2s ease-in-out; }
     header p { font-size:1.2em; margin-bottom:20px; }
-    .download-btn {
-      background:#fff; 
-      color:#1e90ff; 
-      padding:12px 25px; 
-      border:none; 
-      border-radius:5px; 
-      font-weight:bold; 
-      text-decoration:none;
-      transition: transform 0.3s;
-    }
-    .download-btn:hover { transform: scale(1.1); }
+    .download-btn { background:#fff; color:#1e90ff; padding:14px 28px; border:none; border-radius:50px; font-weight:bold; text-decoration:none; transition: transform 0.3s, box-shadow 0.3s; }
+    .download-btn:hover { transform:scale(1.1); box-shadow:0 8px 20px rgba(0,0,0,0.3); }
 
-    section { max-width:900px; margin:50px auto; padding:0 20px; }
-    h2 { color:#1e90ff; margin-bottom:20px; }
+    section { max-width:950px; margin:70px auto; padding:0 20px; }
+    h2 { color:#1e90ff; margin-bottom:25px; border-bottom:2px solid #1e90ff; display:inline-block; padding-bottom:5px; }
+    .card, .cert-card { background:white; padding:25px; margin:20px 0; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+    .card:hover, .cert-card:hover { transform:translateY(-8px); box-shadow:0 12px 30px rgba(0,0,0,0.2); }
 
-    .card { background:white; padding:20px; margin:15px 0; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
-    .card:hover { transform: translateY(-5px); }
-
-    .projects { display:flex; flex-wrap:wrap; gap:20px; }
-    .project-card { flex:1; min-width:250px; background:white; padding:20px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
-    .project-card:hover { transform: translateY(-10px); }
+    .projects { display:flex; flex-wrap:wrap; gap:25px; }
+    .project-card { flex:1; min-width:280px; background:white; padding:25px; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+    .project-card:hover { transform:translateY(-12px); box-shadow:0 15px 35px rgba(0,0,0,0.25); }
 
     ul { list-style-type: square; padding-left:20px; }
 
-    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    footer { text-align:center; padding:25px; color:#555; background:#f0f0f0; margin-top:50px; }
 
-    footer { text-align:center; padding:20px; color:#555; background:#f0f0f0; }
     a { color:#1e90ff; text-decoration:none; }
     a:hover { text-decoration:underline; }
+
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+
+    .particles { position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none; }
+    header * { position:relative; z-index:1; }
+
+    #backToTop { position: fixed; bottom: 30px; right:30px; background:#1e90ff; color:white; border:none; border-radius:50%; width:50px; height:50px; font-size:24px; cursor:pointer; display:none; transition: background 0.3s; }
+    #backToTop:hover { background:#00d4ff; }
+
+    @media(max-width:768px){ .projects { flex-direction: column; } header h1{font-size:2.2em;} header p{font-size:1em;} }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Srihith Papani</h1>
-  <p>Software Engineer | Master’s Student at University of Illinois Springfield</p>
-  <a href="Srihith_Papani_Resume.pdf" download class="download-btn">Download Resume</a>
+  <canvas id="particles" class="particles"></canvas>
+  <h1 class="animate__animated animate__fadeInDown">Srihith Papani</h1>
+  <p class="animate__animated animate__fadeIn">Software Engineer | Master’s Student at University of Illinois Springfield</p>
+  <a href="Srihith_Papani_Resume.pdf" download class="download-btn animate__animated animate__fadeInUp">Download Resume</a>
 </header>
 
-<section id="about">
+<section id="about" class="animate__animated animate__fadeInUp">
   <h2>About Me</h2>
-  <p>I am passionate about building scalable and high-quality software systems. I enjoy backend, frontend, APIs, and cloud technologies. I love creating practical solutions and visually appealing user experiences.</p>
+  <p>I am passionate about building scalable and high-quality software systems. I enjoy backend, frontend, APIs, and cloud technologies. I create practical solutions and visually appealing user experiences.</p>
 </section>
 
-<section id="skills">
+<section id="skills" class="animate__animated animate__fadeInUp">
   <h2>Skills</h2>
   <div class="card">
     <ul>
@@ -73,16 +73,16 @@
   </div>
 </section>
 
-<section id="projects">
+<section id="projects" class="animate__animated animate__fadeInUp">
   <h2>Projects</h2>
   <div class="projects">
     <div class="project-card">
       <h3>E-Commerce Web App</h3>
-      <p>Full-stack e-commerce platform using Java, NextJS, AWS. Features product listings, authentication, and payment integration.</p>
+      <p>Full-stack platform using Java, NextJS, AWS. Includes product listings, authentication, and payment integration.</p>
     </div>
     <div class="project-card">
       <h3>Real-Time Chat App</h3>
-      <p>Kotlin, Firebase. A scalable chat application with live messaging and notifications.</p>
+      <p>Kotlin, Firebase. Scalable chat app with live messaging and notifications.</p>
     </div>
     <div class="project-card">
       <h3>Portfolio Website</h3>
@@ -91,7 +91,13 @@
   </div>
 </section>
 
-<section id="contact">
+<section id="certifications" class="animate__animated animate__fadeInUp">
+  <h2>Certifications</h2>
+  <div class="cert-card">Udemy: Python Programming – Strong coding foundation</div>
+  <div class="cert-card">Udemy: SQL for Developers, Data Analysts & BI – MySQL skills for practical projects</div>
+</section>
+
+<section id="contact" class="animate__animated animate__fadeInUp">
   <h2>Contact</h2>
   <p>Email: <a href="mailto:papanisrihith@gmail.com">papanisrihith@gmail.com</a></p>
   <p>LinkedIn: <a href="https://linkedin.com/in/srihith-papani">linkedin.com/in/srihith-papani</a></p>
@@ -101,6 +107,35 @@
 <footer>
   &copy; 2025 Srihith Papani | Designed for Recruiters
 </footer>
+
+<button id="backToTop">&#8679;</button>
+
+<script>
+  // Particles
+  const canvas = document.getElementById('particles');
+  const ctx = canvas.getContext('2d');
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+  const particlesArray = [];
+  const particleCount = 80;
+
+  window.addEventListener('resize', () => { width = canvas.width = window.innerWidth; height = canvas.height = window.innerHeight; });
+
+  class Particle {
+    constructor() { this.x=Math.random()*width; this.y=Math.random()*height; this.size=Math.random()*3+1; this.speedX=(Math.random()-0.5)*1.5; this.speedY=(Math.random()-0.5)*1.5; }
+    update() { this.x+=this.speedX; this.y+=this.speedY; if(this.x<0||this.x>width)this.speedX*=-1; if(this.y<0||this.y>height)this.speedY*=-1; }
+    draw() { ctx.fillStyle="rgba(255,255,255,0.7)"; ctx.beginPath(); ctx.arc(this.x,this.y,this.size,0,Math.PI*2); ctx.fill(); }
+  }
+
+  function initParticles() { for(let i=0;i<particleCount;i++){ particlesArray.push(new Particle()); } }
+  function animateParticles() { ctx.clearRect(0,0,width,height); particlesArray.forEach(p=>{p.update();p.draw();}); requestAnimationFrame(animateParticles); }
+  initParticles(); animateParticles();
+
+  // Back to Top button
+  const backToTop = document.getElementById('backToTop');
+  window.onscroll = () => { if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){ backToTop.style.display="block"; } else { backToTop.style.display="none"; } };
+  backToTop.onclick = () => { window.scrollTo({ top:0, behavior:'smooth' }); };
+</script>
 
 </body>
 </html>
