@@ -15,12 +15,14 @@
       background: linear-gradient(135deg,#1e90ff,#00d4ff);
       color:white; text-align:center; padding:120px 20px 150px 20px; overflow:hidden;
     }
-    header h1 { font-size:3em; margin-bottom:10px; animation: fadeIn 2s ease-in-out; }
-    header p { font-size:1.2em; margin-bottom:20px; }
-    .download-btn { background:#fff; color:#1e90ff; padding:14px 28px; border:none; border-radius:50px; font-weight:bold; text-decoration:none; transition: transform 0.3s, box-shadow 0.3s; }
+    header h1 { font-size:3em; margin-bottom:10px; animation: fadeInDown 1.5s ease-in-out; }
+    header p { font-size:1.2em; margin-bottom:20px; animation: fadeIn 2s ease-in-out; }
+    .download-btn { background:#fff; color:#1e90ff; padding:14px 28px; border:none; border-radius:50px; font-weight:bold; text-decoration:none; transition: transform 0.3s, box-shadow 0.3s; animation: fadeInUp 2s ease-in-out; }
     .download-btn:hover { transform:scale(1.1); box-shadow:0 8px 20px rgba(0,0,0,0.3); }
 
-    section { max-width:950px; margin:70px auto; padding:0 20px; }
+    section { max-width:950px; margin:70px auto; padding:0 20px; opacity:0; transform:translateY(30px); transition: all 1s ease; }
+    section.visible { opacity:1; transform:translateY(0); }
+
     h2 { color:#1e90ff; margin-bottom:25px; border-bottom:2px solid #1e90ff; display:inline-block; padding-bottom:5px; }
     .card, .cert-card, .exp-card { background:white; padding:25px; margin:20px 0; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
     .card:hover, .cert-card:hover, .exp-card:hover { transform:translateY(-8px); box-shadow:0 12px 30px rgba(0,0,0,0.2); }
@@ -36,7 +38,8 @@
     a { color:#1e90ff; text-decoration:none; }
     a:hover { text-decoration:underline; }
 
-    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    @keyframes fadeInDown { from {opacity:0; transform:translateY(-50px);} to {opacity:1; transform:translateY(0);} }
+    @keyframes fadeInUp { from {opacity:0; transform:translateY(50px);} to {opacity:1; transform:translateY(0);} }
 
     .particles { position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none; }
     header * { position:relative; z-index:1; }
@@ -55,17 +58,17 @@
 
 <header>
   <canvas id="particles" class="particles"></canvas>
-  <h1 class="animate__animated animate__fadeInDown">Srihith Papani</h1>
-  <p class="animate__animated animate__fadeIn">Software Engineer | Master’s Student at University of Illinois Springfield</p>
-  <a href="Srihith_Papani_Resume.pdf" download class="download-btn animate__animated animate__fadeInUp">Download Resume</a>
+  <h1>Srihith Papani</h1>
+  <p>Software Engineer | Master’s Student at University of Illinois Springfield</p>
+  <a href="SRIHITH PAPANI RESUME.pdf" download class="download-btn">Download Resume</a>
 </header>
 
-<section id="about" class="animate__animated animate__fadeInUp">
+<section id="about">
   <h2>About Me</h2>
   <p>I am passionate about building scalable and high-quality software systems. I enjoy backend, frontend, APIs, and cloud technologies. I create practical solutions and visually appealing user experiences.</p>
 </section>
 
-<section id="skills" class="animate__animated animate__fadeInUp">
+<section id="skills">
   <h2>Skills</h2>
   <div class="card">
     <ul>
@@ -79,7 +82,7 @@
   </div>
 </section>
 
-<section id="experience" class="animate__animated animate__fadeInUp">
+<section id="experience">
   <h2>Experience</h2>
   <div class="exp-card">
     <h3>Part-Time (Web Editing) – DART Staff, Springfield, IL, USA</h3>
@@ -103,16 +106,16 @@
   </div>
 </section>
 
-<section id="projects" class="animate__animated animate__fadeInUp">
+<section id="projects">
   <h2>Projects</h2>
   <div class="projects">
     <div class="project-card">
       <h3>Object Detection App</h3>
-      <p>Developed a real-time object detection app for visually impaired users using Flutter, TensorFlow Lite, and Firebase. Achieved 90% accuracy with audio feedback and voice commands.</p>
+      <p>Developed a real-time object detection app for visually impaired users using Flutter, TensorFlow Lite, and Firebase. Achieved 90% accuracy, provided audio feedback, voice commands, alerts, conducted user testing, and significantly enhanced accessibility, usability, independence, safety, and overall user experience.</p>
     </div>
     <div class="project-card">
       <h3>Presentation Control System</h3>
-      <p>Hand gesture recognition system for hands-free presentation control using Python, OpenCV, MediaPipe, TensorFlow, and PyTorch. Achieved 95% detection accuracy for intuitive gestures.</p>
+      <p>Developed a hand gesture recognition system for hands-free presentation control using Python, OpenCV, MediaPipe, TensorFlow, and PyTorch. Achieved 95% detection accuracy, enabling intuitive gesture commands, reducing physical effort, enhancing workflow efficiency, and delivering a real-time, user-friendly, scalable interface for seamless presentations.</p>
     </div>
     <div class="project-card">
       <h3>Portfolio Website</h3>
@@ -121,13 +124,13 @@
   </div>
 </section>
 
-<section id="certifications" class="animate__animated animate__fadeInUp">
+<section id="certifications">
   <h2>Certifications</h2>
   <div class="cert-card">Udemy: Python Programming – Strong coding foundation</div>
   <div class="cert-card">Udemy: SQL for Developers, Data Analysts & BI – MySQL skills for practical projects</div>
 </section>
 
-<section id="volunteer" class="animate__animated animate__fadeInUp">
+<section id="volunteer">
   <h2>Volunteer Experience</h2>
   <div class="exp-card">
     <ul>
@@ -138,7 +141,7 @@
   </div>
 </section>
 
-<section id="contact" class="animate__animated animate__fadeInUp">
+<section id="contact">
   <h2>Contact</h2>
   <p>Email: <a href="mailto:Papanisrihith@gmail.com">Papanisrihith@gmail.com</a></p>
   <p>Phone: (217) 761-7246</p>
@@ -175,10 +178,15 @@
 
   // Back to Top button
   const backToTop = document.getElementById('backToTop');
-  window.onscroll = () => { if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){ backToTop.style.display="block"; } else { backToTop.style.display="none"; } };
+  window.onscroll = () => { if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){ backToTop.style.display="block"; } else { backToTop.style.display="none"; }
+    // Section animations
+    document.querySelectorAll('section').forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if(rect.top < window.innerHeight - 100){ sec.classList.add('visible'); }
+    });
+  };
   backToTop.onclick = () => { window.scrollTo({ top:0, behavior:'smooth' }); };
 </script>
 
 </body>
 </html>
-
